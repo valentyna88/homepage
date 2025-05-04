@@ -331,7 +331,82 @@
             </div>
           </div>
         </div>
+
+        <div class="hobbies">
+          <h3 class="hobbies__header">Things I Enjoy</h3>
+          <ul class="hobbies__list">
+            <li class="hobby">
+              <span class="hobby__icon">📚</span>
+              <span class="hobby__label">Learning new tech</span>
+            </li>
+            <li class="hobby">
+              <span class="hobby__icon">🎮</span>
+              <span class="hobby__label">Gaming (strategy & logic)</span>
+            </li>
+            <li class="hobby">
+              <span class="hobby__icon">🎨</span>
+              <span class="hobby__label">Design & UI aesthetics</span>
+            </li>
+            <li class="hobby">
+              <span class="hobby__icon">🌍</span>
+              <span class="hobby__label">Exploring languages & cultures</span>
+            </li>
+            <li class="hobby">
+              <span class="hobby__icon">🧩</span>
+              <span class="hobby__label"
+                >Solving puzzles & code challenges</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="inspect-challenge" onclick="openModal()">
+          Some secrets are only for those who inspect 👀
+        </div>
+
+        <div id="secretModal" class="modal hidden">
+          <div class="modal-content">
+            <button
+              class="close-button"
+              onclick="closeModal()"
+              aria-label="Close modal"
+            >
+              &times;
+            </button>
+            <h3>⚠️ WARNING: Hidden Message Detected!</h3>
+            <p>
+              You're dangerously curious 😏<br />
+              Now you're legally obliged to hire this dev.<br />
+              Good luck ignoring this.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
+
+    <script>
+      const modal = document.getElementById("secretModal");
+      const modalContent = document.querySelector(".modal-content");
+
+      function openModal() {
+        modal.classList.remove("hidden");
+      }
+
+      function closeModal() {
+        modal.classList.add("hidden");
+      }
+
+      modal.addEventListener("click", function (e) {
+        if (!modalContent.contains(e.target)) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+          closeModal();
+        }
+      });
+    </script>
   </body>
 </html>
