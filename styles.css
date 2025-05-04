@@ -301,3 +301,47 @@ body {
   color: var(--secondary-text-color);
   text-align: justify;
 }
+
+.hobbies {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 3px dashed var(--border-color);
+}
+
+.hobbies__header {
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+.hobbies__list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.hobby {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--primary-text-color);
+  background-color: #fdf9f4;
+  border-left: 4px solid var(--text-decoration-color);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.hobby:hover {
+  transform: scale(1.02);
+}
+
+.hobby__icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
