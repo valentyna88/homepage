@@ -359,6 +359,22 @@
             </li>
           </ul>
         </div>
+
+        <div class="inspect-challenge" onclick="openModal()">
+          Some secrets are only for those who inspect 👀
+        </div>
+
+        <div id="secretModal" class="modal hidden">
+          <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>⚠️ WARNING: Hidden Message Detected!</h3>
+            <p>
+              You're dangerously curious 😏<br />
+              Now you're legally obliged to hire this dev.<br />
+              Good luck ignoring this.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   </body>
