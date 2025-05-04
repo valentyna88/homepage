@@ -260,3 +260,44 @@ body {
 .additional-info__languages-item {
   color: var(--secondary-text-color);
 }
+
+.timeline__header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.timeline__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline__item {
+  margin-bottom: 25px;
+  padding-left: 15px;
+  border-left: 3px solid var(--border-color);
+  position: relative;
+}
+
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--text-decoration-color);
+  border-radius: 50%;
+}
+
+.timeline__date {
+  display: block;
+  color: var(--durability-text-color);
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.timeline__text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
